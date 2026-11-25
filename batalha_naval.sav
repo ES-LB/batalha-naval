@@ -1,0 +1,13 @@
+# Batalha Naval - jogo salvo
+VERSAO=1
+TAMANHO=8
+TURNO=JOGADOR
+JOGADOR=Baka
+UNIDADE|time=JOGADOR|tipo=GALEAO|nome=Vingança da Rainha|linha=5|coluna=3|orientacao=H|avarias=000
+UNIDADE|time=JOGADOR|tipo=FRAGATA|nome=Corvo Negro|linha=0|coluna=0|orientacao=H|avarias=000
+UNIDADE|time=JOGADOR|tipo=ESCUNA|nome=Maré Alta|linha=4|coluna=2|orientacao=V|avarias=000
+UNIDADE|time=COMPUTADOR|tipo=GALEAO|nome=Coroa de Ferro|linha=2|coluna=3|orientacao=H|avarias=000
+UNIDADE|time=COMPUTADOR|tipo=FRAGATA|nome=Leão dos Mares|linha=0|coluna=4|orientacao=H|avarias=000
+UNIDADE|time=COMPUTADOR|tipo=ESCUNA|nome=Sentinela|linha=1|coluna=1|orientacao=H|avarias=000
+DISPAROS|time=JOGADOR|grade=......../......../......../......../......../......../......../........
+DISPAROS|time=COMPUTADOR|grade=......../......../......../......../......../......../......../........

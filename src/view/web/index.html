@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Batalha Naval — Piratas</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚓</text></svg>">
+  <link rel="stylesheet" href="/estilo.css">
+</head>
+<body>
+  <header class="topo">
+    <h1>Batalha Naval <span>· Piratas</span></h1>
+    <div class="acoes">
+      <button id="btn-salvar" class="btn" type="button" hidden>Salvar jogo</button>
+      <button id="btn-menu" class="btn btn-secundario" type="button" hidden>Menu</button>
+    </div>
+  </header>
+
+  <p id="status" class="status" role="status" aria-live="polite">Carregando…</p>
+
+  <main class="mesa" id="mesa" hidden>
+    <section class="lado">
+      <h2>Seu mar <small id="nome-jogador"></small></h2>
+      <div id="grade-minha" class="grade" aria-label="Seu mar"></div>
+      <div id="painel-posicionar" class="painel-posicionar" hidden>
+        <p>Posicione: <strong id="navio-atual"></strong> (3 casas)</p>
+        <div class="linha-botoes">
+          <button id="btn-girar" class="btn btn-secundario" type="button">Girar ↔ (R)</button>
+          <button id="btn-sortear" class="btn btn-secundario" type="button">Sortear tudo</button>
+        </div>
+      </div>
+      <ul id="frota-minha" class="frota"></ul>
+    </section>
+
+    <section class="lado">
+      <h2>Mar inimigo <small>Marinha Real</small></h2>
+      <div id="grade-inimiga" class="grade" aria-label="Mar inimigo"></div>
+      <ul id="frota-inimiga" class="frota"></ul>
+    </section>
+
+    <aside class="diario">
+      <h2>Diário de bordo</h2>
+      <ol id="diario" reversed></ol>
+    </aside>
+  </main>
+
+  <div id="tela-inicio" class="sobreposicao" hidden>
+    <form id="form-inicio" class="cartao">
+      <h2>Zarpar!</h2>
+      <p>Afunde os 3 navios da Marinha Real antes que ela afunde os seus.</p>
+      <label for="campo-nome">Nome do capitão</label>
+      <input id="campo-nome" maxlength="20" autocomplete="off" placeholder="Capitão">
+      <button class="btn" type="submit">Nova partida</button>
+      <button id="btn-continuar" class="btn btn-secundario" type="button">Continuar jogo salvo</button>
+      <button id="btn-voltar" class="btn btn-secundario" type="button" hidden>Voltar para a partida atual</button>
+      <p id="erro-inicio" class="erro" role="alert"></p>
+    </form>
+  </div>
+
+  <div id="tela-fim" class="sobreposicao" hidden>
+    <div class="cartao">
+      <h2 id="titulo-fim"></h2>
+      <p id="texto-fim"></p>
+      <button id="btn-revanche" class="btn" type="button">Jogar de novo</button>
+      <button id="btn-ver-mapa" class="btn btn-secundario" type="button">Ver os mapas</button>
+    </div>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
